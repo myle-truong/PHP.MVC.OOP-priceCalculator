@@ -45,7 +45,7 @@ $groups_data = json_decode($groups_json); ?>
       }
     ?>
     </select>
-    <br><br> -->
+
   <form>
       <input type="submit" name="select">
   </form>
