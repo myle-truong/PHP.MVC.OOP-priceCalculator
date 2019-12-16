@@ -1,4 +1,4 @@
-# Title: OOP Pricecalculator challenge by Kasra Tabrizi
+# Title: OOP Pricecalculator challenge
 
 - Repository: `oop-pricecalculator`
 - Type of Challenge: `Learning challenge`
@@ -93,4 +93,3 @@ require 'view.php';
 
 - Do you prefer procedural code or object oriented one? Why?
 - What is the use of an MVC? Do you prefer another way of structuring your code?
-# PHP.MVC.OOP---priceCalculator
