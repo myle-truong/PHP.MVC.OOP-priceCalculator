@@ -1,4 +1,4 @@
-# Title: OOP Pricecalculator challenge by Kasra Tabrizi
+# Title: OOP Pricecalculator challenge
 
 - Repository: `oop-pricecalculator`
 - Type of Challenge: `Learning challenge`
