@@ -7,23 +7,23 @@
   <title>MVC_OOP Price Caculator</title>
 </head>
 <body>
-<form>
-<?php
+<form method="POST" action="..\priceCalculator\models\model.php">
 
+<?php
 $customers_json = file_get_contents('http://localhost/MVC/priceCalculator/models/customers.json');
 $customers_data = json_decode($customers_json); ?>
+    <select name="customers">
+      <?php
+      foreach ($customers_data as $listName) {?>
+          <option value="<?php echo $listName-> name ?>"><?php echo $listName-> name ?></option>
+      <?php } ?>
+    </select>
 
-  <select name="customers">
-    <?php
-      foreach ($customers_data as $listName) {
-        echo '<option value="\"$value\"'.$listName->id.'">'.$listName->name.'</option>';
-      }
-    ?>
-  </select>
 <?php 
 
 $products_json = file_get_contents('http://localhost/MVC/priceCalculator/models/products.json'); 
-$products_data = json_decode($products_json); ?>
+$products_data = json_decode($products_json); 
+?>
       <select name="products">
         <?php
           foreach ($products_data as $listProducts) {
