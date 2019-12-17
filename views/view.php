@@ -7,10 +7,9 @@
   <title>MVC_OOP Price Caculator</title>
 </head>
 <body>
-
+<form>
 <?php
 
-//get data from json file of customers
 $customers_json = file_get_contents('http://localhost/MVC/priceCalculator/models/customers.json');
 $customers_data = json_decode($customers_json); ?>
 
@@ -21,9 +20,8 @@ $customers_data = json_decode($customers_json); ?>
       }
     ?>
   </select>
-  <br><br>
 <?php 
-//get data from products's json file
+
 $products_json = file_get_contents('http://localhost/MVC/priceCalculator/models/products.json'); 
 $products_data = json_decode($products_json); ?>
       <select name="products">
@@ -33,23 +31,9 @@ $products_data = json_decode($products_json); ?>
           } 
         ?>
       </select>
-      <br><br>
-<!-- <?php
-//get data from group' json file
-$groups_json = file_get_contents('http://localhost/MVC/priceCalculator/models/groups.json');
-$groups_data = json_decode($groups_json); ?>
-    <select name="products">
-    <?php
-      foreach ($groups_data as $listGroups) {
-        echo '<option value=\"$value\"'.$listGroups->id.'">'.$listGroups->name.'</option>';
-      }
-    ?>
-    </select>
-
-  <form>
-      <input type="submit" name="select">
+      <input type="submit" name="submit" value="submit">
   </form>
-  
+  <div><?php echo $_SESSION['output']; ?></div>
 
 </body>
 </html>
