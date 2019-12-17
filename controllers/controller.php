@@ -1,3 +1,9 @@
 <?php 
-$customer=$_POST['listNames'];
-$product=$_POST['listProducts'];
+$customer=$_POST["customer"];
+$product=$_POST["product"];
+
+class discount {
+   public $variable = 0;
+   public $fixed = 0;
+}
+
