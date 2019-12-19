@@ -12,7 +12,7 @@
 <?php
 $customers_json = file_get_contents('http://localhost/MVC/priceCalculator/models/customers.json');
 $customers_data = json_decode($customers_json); ?>
-    <select name="customers" id = "customer">
+    <select name="customer" id = "customer">
       <?php
       foreach ($customers_data as $name) {?>
           <option value="<?php echo $name-> name ?>"><?php echo $name-> name ?></option>
@@ -22,7 +22,7 @@ $customers_data = json_decode($customers_json); ?>
 <?php 
 $products_json = file_get_contents('http://localhost/MVC/priceCalculator/models/products.json'); 
 $products_data = json_decode($products_json); ?>
-      <select name="products" id = "product">
+      <select name="product" id = "product">
         <?php
           foreach ($products_data as $product) { ?>
             <option value="<?php echo $product-> name ?>"><?php echo $product-> name ?></option>
@@ -30,7 +30,7 @@ $products_data = json_decode($products_json); ?>
       </select>
       <input type="submit" name="submit" value="submit">
   </form>
-  <div><?php echo $_SESSION['output']; ?></div>
+ 
 
 </body>
 </html>
